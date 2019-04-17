@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 2bd8959f5fbd3644aa33af1a155fc147, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -140,7 +140,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.2
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -891,6 +891,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 2039764364}
+    - target: {fileID: 1673535946, guid: f847449d4de7f6c49880fb05f6490bc2, type: 3}
+      propertyPath: isGlobal
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f847449d4de7f6c49880fb05f6490bc2, type: 3}
 --- !u!1001 &1412047924
@@ -1076,7 +1080,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c05d19071cec4974bb82ecf902250868, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.657
+  m_Volume: 0.576
   m_Pitch: 1
   Loop: 1
   Mute: 0
