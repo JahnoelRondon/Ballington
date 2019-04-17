@@ -37,7 +37,7 @@ public class ColliderHandler : MonoBehaviour
         {
             case "Death":
                 _player.rb.velocity = Vector3.zero;
-                transform.position = new Vector3(9f, 111f, -140f);
+                transform.position = new Vector3(0f, 20f, 0f);
                 break;
         }
     }
