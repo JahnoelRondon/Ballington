@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ColliderHandler : MonoBehaviour
 {
@@ -36,8 +37,9 @@ public class ColliderHandler : MonoBehaviour
         switch (other.gameObject.tag)
         {
             case "Death":
-                _player.rb.velocity = Vector3.zero;
-                transform.position = new Vector3(0f, 20f, 0f);
+                SceneManager.LoadScene("World1");
+                //_player.rb.velocity = Vector3.zero;
+                //transform.position = new Vector3(0f, 20f, 0f);
                 break;
         }
     }
