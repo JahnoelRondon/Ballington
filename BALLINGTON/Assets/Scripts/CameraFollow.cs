@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     [SerializeField] Transform target;
-    [SerializeField] Vector3 offset;
+    [SerializeField] Vector3 offset = new Vector3(0, 1.5f, -4f);
     [SerializeField] float smoothspd = 0.125f;
 
     /*
@@ -50,7 +50,7 @@ public class CameraFollow : MonoBehaviour
 
     void LateUpdate()
     {
-        float _mousex = Input.GetAxis("Mouse X");
+        //float _mousex = Input.GetAxis("Mouse X");
 
         Vector3 desiredPosition = target.position + offset;
         Vector3 smoothing = Vector3.Lerp(transform.position, desiredPosition, smoothspd);
