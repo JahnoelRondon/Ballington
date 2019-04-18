@@ -5,11 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class ColliderHandler : MonoBehaviour
 {
+    private GameMaster _gamMaster;
     private PlayerMover _player;
 
     void Start()
     {
         _player = GetComponent<PlayerMover>();
+        _gamMaster = GameObject.Find("GameMaster").GetComponent<GameMaster>();
     }
 
     void OnCollisionEnter(Collision other)
@@ -28,6 +30,7 @@ public class ColliderHandler : MonoBehaviour
         {
             case "jumpAble":
                 _player.isGrounded = false;
+
                 break;
         }
     }
@@ -37,9 +40,12 @@ public class ColliderHandler : MonoBehaviour
         switch (other.gameObject.tag)
         {
             case "Death":
+
                 SceneManager.LoadScene("World1");
+                //teleports player back to issland instead of reloading scene
+                //_gamMaster.Playcrowd();
                 //_player.rb.velocity = Vector3.zero;
-                //transform.position = new Vector3(0f, 20f, 0f);
+               // transform.position = new Vector3(0.769f, 60.76f, -225.21f);
                 break;
         }
     }
