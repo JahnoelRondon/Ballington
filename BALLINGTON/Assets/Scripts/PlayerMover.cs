@@ -10,7 +10,7 @@ public class PlayerMover : MonoBehaviour
     public float playerspd = 300f;
 
     public Rigidbody rb;
-    public float jumpForce = 1f;
+    public float jumpForce = 300f;
     public bool isGrounded = false;
 
     void Start()
@@ -26,8 +26,8 @@ public class PlayerMover : MonoBehaviour
 
         if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
         {
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            //rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
+            //rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            rb.velocity = new Vector3(rb.velocity.x, jumpForce * Time.deltaTime, rb.velocity.z);
         }
 
     }

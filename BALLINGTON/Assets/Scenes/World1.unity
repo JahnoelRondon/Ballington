@@ -683,7 +683,7 @@ PrefabInstance:
     - target: {fileID: 3011322457012364774, guid: 87824bdb8b1c30843bcee199a0617d3f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.769
+      value: 0.73
       objectReference: {fileID: 0}
     - target: {fileID: 3011322457012364774, guid: 87824bdb8b1c30843bcee199a0617d3f,
         type: 3}
@@ -693,7 +693,7 @@ PrefabInstance:
     - target: {fileID: 3011322457012364774, guid: 87824bdb8b1c30843bcee199a0617d3f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -225.21
+      value: -225.08
       objectReference: {fileID: 0}
     - target: {fileID: 3011322457012364774, guid: 87824bdb8b1c30843bcee199a0617d3f,
         type: 3}
@@ -751,6 +751,11 @@ PrefabInstance:
       propertyPath: _crowdAw
       value: 
       objectReference: {fileID: 8300000, guid: 42e1e1106ff568f44a699f9c292a7e06, type: 3}
+    - target: {fileID: 3011322457012364778, guid: 87824bdb8b1c30843bcee199a0617d3f,
+        type: 3}
+      propertyPath: jumpForce
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87824bdb8b1c30843bcee199a0617d3f, type: 3}
 --- !u!1001 &775926166
