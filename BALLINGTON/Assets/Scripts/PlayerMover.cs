@@ -27,12 +27,13 @@ public class PlayerMover : MonoBehaviour
             print("pressed space");
             //rb.velocity = new Vector3(rb.velocity.x, jumpForce * Time.deltaTime, rb.velocity.z);
         }
+
+        PlayerMovement();
     }
 
     void FixedUpdate()
     {
-        PlayerMovement();      
-
+              
     }
 
 
