@@ -10,7 +10,7 @@ public class PlayerMover : MonoBehaviour
     public float playerspd = 300f;
 
     public Rigidbody rb;
-    public float jumpForce = 300f;
+    public float jumpForce = 260f;
     public bool isGrounded = false;
 
     void Start()
@@ -19,16 +19,19 @@ public class PlayerMover : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
+    void Update()
+    {
+        if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.AddForce(Vector3.up * jumpForce * Time.deltaTime, ForceMode.Impulse);
+            print("pressed space");
+            //rb.velocity = new Vector3(rb.velocity.x, jumpForce * Time.deltaTime, rb.velocity.z);
+        }
+    }
 
     void FixedUpdate()
     {
-        PlayerMovement();
-
-        if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
-        {
-            //rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            rb.velocity = new Vector3(rb.velocity.x, jumpForce * Time.deltaTime, rb.velocity.z);
-        }
+        PlayerMovement();      
 
     }
 
@@ -42,6 +45,8 @@ public class PlayerMover : MonoBehaviour
         Vector3 velocity = movement * playerspd;
 
         rb.AddForce(velocity * Time.deltaTime);
+        
+        //try using velocity instead of addforce
     }
 
 

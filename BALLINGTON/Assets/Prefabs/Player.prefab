@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 7022c09217fec9e45a1c2f94ab1ca194, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -108,7 +108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerspd: 300
   rb: {fileID: 0}
-  jumpForce: 5
+  jumpForce: 260
   isGrounded: 0
 --- !u!114 &3011322457012364781
 MonoBehaviour:
