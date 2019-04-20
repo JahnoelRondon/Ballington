@@ -108,8 +108,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerspd: 300
   rb: {fileID: 0}
-  jumpForce: 260
+  jumpForce: 205
   isGrounded: 0
+  PressedJump: 0
 --- !u!114 &3011322457012364781
 MonoBehaviour:
   m_ObjectHideFlags: 0
