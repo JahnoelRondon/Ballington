@@ -10,7 +10,7 @@ public class PlayerMover : MonoBehaviour
     public float jumpForce = 260f;
     public bool isGrounded = false;
     public bool PressedJump = false;
-    public bool isMoving = false;
+    
 
 
     void Start()
@@ -26,26 +26,13 @@ public class PlayerMover : MonoBehaviour
             PressedJump = true;
         }
 
-        if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
-        {
-
-            isMoving = true;
-        } else
-        {
-            isMoving = false;
-        }
-        
+       
     }
 
 
     void FixedUpdate()
     {
-        //playermovement
-        if(isMoving == true)
-        {
-
-        }
-
+      
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
@@ -68,14 +55,6 @@ public class PlayerMover : MonoBehaviour
 
 
     }
-
-
-    private void PlayerMovement()
-    {
-        
-              
-    }
-
 
 
 }
