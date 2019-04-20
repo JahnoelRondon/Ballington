@@ -41,9 +41,13 @@ public class ColliderHandler : MonoBehaviour
         {
             //when making other levels Change water tag to death2, death3, death4
             case "Death":
+
+                //invoke calling method works too
                 StartCoroutine(LoadFirstLevel());
+                
 
                 //teleports player back to issland instead of reloading scene
+
                 //_gamMaster.Playcrowd();
                 //_player.rb.velocity = Vector3.zero;
                // transform.position = new Vector3(0.769f, 60.76f, -225.21f);
