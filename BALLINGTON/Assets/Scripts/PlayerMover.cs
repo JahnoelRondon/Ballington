@@ -52,16 +52,16 @@ public class PlayerMover : MonoBehaviour
         Vector3 movement = new Vector3(horizontalInput, 0, verticalInput);
         Vector3 velocity = movement * playerspd;
 
-        rb.AddForce(velocity * Time.fixedDeltaTime);
+        rb.AddForce(velocity * Time.deltaTime);
 
 
 
         //jumping
         if (PressedJump == true)
         {
-            //rb.AddForce(Vector3.up * jumpForce * Time.deltaTime, ForceMode.Impulse);
+            rb.AddForce(Vector3.up * jumpForce * Time.deltaTime, ForceMode.Impulse);
             print("pressed space");
-            rb.velocity = new Vector3(rb.velocity.x, jumpForce * Time.deltaTime, rb.velocity.z);
+            //rb.velocity = new Vector3(rb.velocity.x, jumpForce * Time.deltaTime, rb.velocity.z);
 
             PressedJump = false;
         }
