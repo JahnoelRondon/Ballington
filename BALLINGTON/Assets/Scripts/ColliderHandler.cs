@@ -39,9 +39,10 @@ public class ColliderHandler : MonoBehaviour
     {
         switch (other.gameObject.tag)
         {
+            //when making other levels Change water tag to death2, death3, death4
             case "Death":
+                StartCoroutine(LoadFirstLevel());
 
-                SceneManager.LoadScene("World1");
                 //teleports player back to issland instead of reloading scene
                 //_gamMaster.Playcrowd();
                 //_player.rb.velocity = Vector3.zero;
@@ -49,4 +50,11 @@ public class ColliderHandler : MonoBehaviour
                 break;
         }
     }
+
+    IEnumerator LoadFirstLevel()
+    {
+        yield return new WaitForSeconds(0.3f);
+        SceneManager.LoadScene("World1");
+    }
+
 }
