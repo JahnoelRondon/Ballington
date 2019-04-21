@@ -4,14 +4,23 @@ using UnityEngine;
 
 public class platformMover : MonoBehaviour
 {
-   
-    void Start()
+    
+    public GameObject _Player;
+
+    private void OnCollisionEnter(Collision other)
     {
-        
+        if (other.gameObject == _Player)
+        {
+            _Player.transform.parent = transform;
+        }
     }
 
-    void Update()
+    private void OnCollisionExit(Collision other)
     {
-        
+        if (other.gameObject == _Player)
+        {
+            _Player.transform.parent = null;
+        }
     }
+    
 }

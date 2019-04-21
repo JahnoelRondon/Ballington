@@ -1,5 +1,67 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1681990552159557315
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 415073874226790800}
+  m_Layer: 0
+  m_Name: SpinPlatform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &415073874226790800
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681990552159557315}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.1495113, y: 0.07999994, z: 7.259998}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4241807169132597572}
+  m_Father: {fileID: 4241807167722235672}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3594780147559389140
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3099651343082291462}
+  m_Layer: 0
+  m_Name: SpinPlatform (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3099651343082291462
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3594780147559389140}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 4.8918605, y: 0.07999994, z: 7.088112}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4241807168849299745}
+  m_Father: {fileID: 4241807167281488048}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4241807167227428856
 GameObject:
   m_ObjectHideFlags: 0
@@ -28,7 +90,7 @@ Transform:
   m_LocalScale: {x: 0.28641486, y: 0.3505974, z: 0.29734248}
   m_Children:
   - {fileID: 4241807168839387475}
-  - {fileID: 4241807168534879007}
+  - {fileID: 1306111461555210337}
   m_Father: {fileID: 4241807169366099884}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
@@ -60,7 +122,7 @@ Transform:
   m_LocalScale: {x: 0.28641486, y: 0.3505974, z: 0.29734248}
   m_Children:
   - {fileID: 4241807167419395863}
-  - {fileID: 4241807168849299745}
+  - {fileID: 3099651343082291462}
   m_Father: {fileID: 4241807169366099884}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
@@ -183,7 +245,7 @@ Transform:
   m_LocalScale: {x: 0.29734233, y: 0.3505974, z: 0.28641474}
   m_Children:
   - {fileID: 4241807168267490175}
-  - {fileID: 4241807169206068294}
+  - {fileID: 2215013927418186988}
   m_Father: {fileID: 4241807169366099884}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
@@ -215,7 +277,7 @@ Transform:
   m_LocalScale: {x: 0.29734233, y: 0.3505974, z: 0.28641474}
   m_Children:
   - {fileID: 4241807167907278827}
-  - {fileID: 4241807169132597572}
+  - {fileID: 415073874226790800}
   m_Father: {fileID: 4241807169366099884}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -414,7 +476,7 @@ GameObject:
   - component: {fileID: 4241807168534878993}
   - component: {fileID: 4241807168534878992}
   m_Layer: 0
-  m_Name: SpinPlatform
+  m_Name: platBody
   m_TagString: jumpAble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -427,12 +489,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4241807168534879006}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.24531, y: -0.36, z: 7.32}
-  m_LocalScale: {x: 5, y: 1.2694489, z: 8.456152}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0.018339576, y: -0.43999964, z: 0.706791}
+  m_LocalScale: {x: 5, y: 1.2694489, z: 8.456159}
   m_Children: []
-  m_Father: {fileID: 4241807167227428857}
-  m_RootOrder: 1
+  m_Father: {fileID: 1306111461555210337}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4241807168534878994
 MeshFilter:
@@ -490,8 +552,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.9999999, y: 0.38689786, z: 1}
+  m_Center: {x: 0, y: 0.30655122, z: 0}
 --- !u!1 &4241807168597338397
 GameObject:
   m_ObjectHideFlags: 0
@@ -688,7 +750,7 @@ GameObject:
   - component: {fileID: 4241807168849299747}
   - component: {fileID: 4241807168849299746}
   m_Layer: 0
-  m_Name: SpinPlatform
+  m_Name: platBody
   m_TagString: jumpAble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -701,12 +763,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4241807168849299744}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.71, y: -0.36, z: 7.32}
-  m_LocalScale: {x: 5, y: 1.2694489, z: 8.456152}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0.23188974, y: -0.43999964, z: -0.1818581}
+  m_LocalScale: {x: 5, y: 1.2694489, z: 8.456159}
   m_Children: []
-  m_Father: {fileID: 4241807167281488048}
-  m_RootOrder: 1
+  m_Father: {fileID: 3099651343082291462}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4241807168849299748
 MeshFilter:
@@ -764,8 +826,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.9999999, y: 0.4257285, z: 1}
+  m_Center: {x: 0, y: 0.2871359, z: 0}
 --- !u!1 &4241807169132597583
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,7 +841,7 @@ GameObject:
   - component: {fileID: 4241807169132597570}
   - component: {fileID: 4241807169132597569}
   m_Layer: 0
-  m_Name: SpinPlatform
+  m_Name: platBody
   m_TagString: jumpAble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -793,11 +855,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4241807169132597583}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.24531, y: -0.36, z: 7.32}
+  m_LocalPosition: {x: 0.095798016, y: -0.43999964, z: 0.060001373}
   m_LocalScale: {x: 5, y: 1.2694489, z: 8.456152}
   m_Children: []
-  m_Father: {fileID: 4241807167722235672}
-  m_RootOrder: 1
+  m_Father: {fileID: 415073874226790800}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4241807169132597571
 MeshFilter:
@@ -855,8 +917,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 0.29977137, z: 1}
+  m_Center: {x: 0, y: 0.35011503, z: 0}
 --- !u!1 &4241807169206068293
 GameObject:
   m_ObjectHideFlags: 0
@@ -870,7 +932,7 @@ GameObject:
   - component: {fileID: 4241807169206068280}
   - component: {fileID: 4241807169206068295}
   m_Layer: 0
-  m_Name: SpinPlatform
+  m_Name: platBody
   m_TagString: jumpAble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -883,12 +945,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4241807169206068293}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.24531, y: -0.36, z: 7.32}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: 0.48053217, y: -0.43999964, z: 0.04693985}
   m_LocalScale: {x: 5, y: 1.2694489, z: 8.456152}
   m_Children: []
-  m_Father: {fileID: 4241807167712872324}
-  m_RootOrder: 1
+  m_Father: {fileID: 2215013927418186988}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4241807169206068281
 MeshFilter:
@@ -946,8 +1008,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 0.4208573, z: 1}
+  m_Center: {x: -0, y: 0.2895714, z: -0}
 --- !u!1 &4241807169259739877
 GameObject:
   m_ObjectHideFlags: 0
@@ -1090,3 +1152,65 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spinSpd: 45
+--- !u!1 &5305151017624536316
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2215013927418186988}
+  m_Layer: 0
+  m_Name: SpinPlatform (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2215013927418186988
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5305151017624536316}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 4.7258415, y: 0.07999994, z: 7.3669395}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4241807169206068294}
+  m_Father: {fileID: 4241807167712872324}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5997230725787524996
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1306111461555210337}
+  m_Layer: 0
+  m_Name: SpinPlatform (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1306111461555210337
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5997230725787524996}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 4.9521003, y: 0.07999994, z: 7.338341}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4241807168534879007}
+  m_Father: {fileID: 4241807167227428857}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
