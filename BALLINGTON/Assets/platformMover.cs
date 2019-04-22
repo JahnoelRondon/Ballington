@@ -2,25 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class platformMover : MonoBehaviour
+public class PlatformMover : MonoBehaviour
 {
     
-    public GameObject _Player;
+    [SerializeField] Transform pos1, pos2;
+    [SerializeField] float speed = 5f;
+    [SerializeField] Transform startPos;
 
-    private void OnCollisionEnter(Collision other)
+    Vector3 nextpos;
+
+    void Start()
     {
-        if (other.gameObject == _Player)
-        {
-            _Player.transform.parent = transform;
-        }
+        nextpos = startPos.position;
     }
 
-    private void OnCollisionExit(Collision other)
+    void FixedUpdate()
     {
-        if (other.gameObject == _Player)
+        if(transform.position == pos1.position) 
         {
-            _Player.transform.parent = null;
+            nextpos = pos2.position;
         }
+
+        if(transform.position == pos2.position)
+        {
+            nextpos = pos1.position;
+        }
+
+        transform.position = Vector3.MoveTowards(transform.position, nextpos, speed * Time.deltaTime);
+
     }
     
 }
