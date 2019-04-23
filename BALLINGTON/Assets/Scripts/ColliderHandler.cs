@@ -7,6 +7,8 @@ public class ColliderHandler : MonoBehaviour
 {
     
     private PlayerMover _player;
+    [SerializeField] private AudioClip _clipyay;
+
 
     void Start()
     {
@@ -21,6 +23,8 @@ public class ColliderHandler : MonoBehaviour
             case "jumpAble":
                 _player.isGrounded = true;
                 break;
+
+            
         }
     }
 
@@ -39,7 +43,7 @@ public class ColliderHandler : MonoBehaviour
     {
         switch (other.gameObject.tag)
         {
-            //when making other levels Change water tag to death2, death3, death4
+            //when making other levels Change water tag to death2, death3, death4 && load those levels
             case "Death":
 
                 //invoke calling method works too
@@ -51,6 +55,10 @@ public class ColliderHandler : MonoBehaviour
                 //_gamMaster.Playcrowd();
                 //_player.rb.velocity = Vector3.zero;
                // transform.position = new Vector3(0.769f, 60.76f, -225.21f);
+                break;
+
+            case "Win":
+                AudioSource.PlayClipAtPoint(_clipyay, Camera.main.transform.position);
                 break;
         }
     }

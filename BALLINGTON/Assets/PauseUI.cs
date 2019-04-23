@@ -5,9 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class PauseUI : MonoBehaviour
 {
+
+
     public void goToMain()
     {
         SceneManager.LoadScene("StartMenu");
+    }
+
+    public void toTutorial()
+    {
+        SceneManager.LoadScene("TutorialWorld");
+        Destroy(GameObject.Find("GameMaster"));
+        //player is frozen if time isnt set back to 1
+        Time.timeScale = 1f;
     }
 
     public void resumePlay()
@@ -19,6 +29,7 @@ public class PauseUI : MonoBehaviour
     {
         Time.timeScale = 0f;
     }
+
 
     public void pauseQuit()
     {
