@@ -10,6 +10,15 @@ public class PauseUI : MonoBehaviour
         SceneManager.LoadScene("StartMenu");
     }
 
+    public void resumePlay()
+    {
+        Time.timeScale = 1f;
+    }
+
+    public void pauseGame()
+    {
+        Time.timeScale = 0f;
+    }
 
     public void pauseQuit()
     {

@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class ColliderHandler : MonoBehaviour
 {
-    private GameMaster _gamMaster;
+    
     private PlayerMover _player;
 
     void Start()
     {
         _player = GetComponent<PlayerMover>();
-        _gamMaster = GameObject.Find("GameMaster").GetComponent<GameMaster>();
+        
     }
 
     void OnCollisionEnter(Collision other)
