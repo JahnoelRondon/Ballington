@@ -7,8 +7,11 @@ public class TestPause : MonoBehaviour
 {   
     [SerializeField] GameObject PauseScreen;
     [SerializeField] GameObject Pausebutton;
+
     [SerializeField] GameObject Pausewin;
+
     private Animator _pauseAnimator;
+
     // end animator
     private Animator _pauseEndaminator;
 

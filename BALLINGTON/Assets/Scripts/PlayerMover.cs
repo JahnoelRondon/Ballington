@@ -14,7 +14,8 @@ public class PlayerMover : MonoBehaviour
 
 
     void Start()
-    {       
+    {
+        Time.timeScale = 1;
         rb = GetComponent<Rigidbody>();
     }
 

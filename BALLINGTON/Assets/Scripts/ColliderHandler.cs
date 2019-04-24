@@ -10,12 +10,14 @@ public class ColliderHandler : MonoBehaviour
     [SerializeField] private AudioClip _clipyay;
 
     private TestPause _pauseWin;
+    private TutorialUI _tutorialUI;
 
     void Start()
     {
         _player = GetComponent<PlayerMover>();
         _pauseWin = GameObject.Find("Canvas").GetComponent<TestPause>();
-        
+
+        _tutorialUI = GameObject.Find("Canvas").GetComponent<TutorialUI>();
     }
 
     void OnCollisionEnter(Collision other)
@@ -63,14 +65,26 @@ public class ColliderHandler : MonoBehaviour
 
             case "Win":
                 AudioSource.PlayClipAtPoint(_clipyay, Camera.main.transform.position);
-                Invoke("WonGame", 3f);
+                Time.timeScale = 0.5f;
+                Invoke("WonGame", 2.5f);
                 break;
 
             case "WrongWay":
                 _player.rb.velocity = Vector3.zero;
                 transform.position = new Vector3(0, 3, -30);
                 break;
+
+            case "EasterEgg":
+                Time.timeScale = 0.5f;
+                Invoke("EasterEggDeath", 1.5f);
+                _tutorialUI.PlayFade();
+                break;
         }
+    }
+
+    private void EasterEggDeath()
+    {
+        SceneManager.LoadScene("World1");
     }
 
     IEnumerator LoadFirstLevel()
