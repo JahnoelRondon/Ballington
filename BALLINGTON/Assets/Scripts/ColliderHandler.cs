@@ -12,12 +12,16 @@ public class ColliderHandler : MonoBehaviour
     private TestPause _pauseWin;
     private TutorialUI _tutorialUI;
 
+    private SecretOrb _secretOrb;
+
     void Start()
     {
         _player = GetComponent<PlayerMover>();
         _pauseWin = GameObject.Find("Canvas").GetComponent<TestPause>();
 
         _tutorialUI = GameObject.Find("Canvas").GetComponent<TutorialUI>();
+
+        _secretOrb = GameObject.Find("SecretLevel").GetComponent<SecretOrb>();
     }
 
     void OnCollisionEnter(Collision other)
@@ -77,6 +81,7 @@ public class ColliderHandler : MonoBehaviour
             case "EasterEgg":
                 Time.timeScale = 0.5f;
                 Invoke("EasterEggDeath", 1.5f);
+                _secretOrb.StoleOrb();
                 _tutorialUI.PlayFade();
                 break;
         }
