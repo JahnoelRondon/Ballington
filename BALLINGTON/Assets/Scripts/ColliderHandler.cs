@@ -26,7 +26,10 @@ public class ColliderHandler : MonoBehaviour
                 _player.isGrounded = true;
                 break;
 
-            
+            case "WrongWay":
+                _player.rb.velocity = Vector3.zero;
+                transform.position = new Vector3(0, 3, -30);
+                break;
         }
     }
 
@@ -52,9 +55,8 @@ public class ColliderHandler : MonoBehaviour
                 StartCoroutine(LoadFirstLevel());
                 
 
-                //teleports player back to issland instead of reloading scene
-
-                //_gamMaster.Playcrowd();
+                //teleports player back to island instead of reloading scene
+                
                 //_player.rb.velocity = Vector3.zero;
                // transform.position = new Vector3(0.769f, 60.76f, -225.21f);
                 break;
@@ -62,6 +64,11 @@ public class ColliderHandler : MonoBehaviour
             case "Win":
                 AudioSource.PlayClipAtPoint(_clipyay, Camera.main.transform.position);
                 Invoke("WonGame", 3f);
+                break;
+
+            case "WrongWay":
+                _player.rb.velocity = Vector3.zero;
+                transform.position = new Vector3(0, 3, -30);
                 break;
         }
     }

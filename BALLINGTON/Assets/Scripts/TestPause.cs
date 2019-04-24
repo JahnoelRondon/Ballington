@@ -9,11 +9,17 @@ public class TestPause : MonoBehaviour
     [SerializeField] GameObject Pausebutton;
     [SerializeField] GameObject Pausewin;
     private Animator _pauseAnimator;
+    // end animator
+    private Animator _pauseEndaminator;
 
     void Start()
     {
         _pauseAnimator = GameObject.Find("PauseMenu").GetComponent<Animator>();
         _pauseAnimator.updateMode = AnimatorUpdateMode.UnscaledTime;
+
+        //end animator
+        _pauseEndaminator = GameObject.Find("PauseWin").GetComponent<Animator>();
+        _pauseEndaminator.updateMode = AnimatorUpdateMode.UnscaledTime;
     }
 
     public void goToMain()
@@ -50,12 +56,13 @@ public class TestPause : MonoBehaviour
     {
         Time.timeScale = 0f;
         Pausewin.SetActive(true);
-        _pauseAnimator.SetBool("isPaused", true);
+        _pauseEndaminator.SetBool("isPaused", true);
     }
 
     public void ReplayLevel1()
     {
-
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("World1");
     }
 
     public void pauseQuit()
