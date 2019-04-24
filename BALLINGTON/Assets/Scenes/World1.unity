@@ -484,7 +484,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &165989858
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1085,11 +1085,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -1803,17 +1803,17 @@ PrefabInstance:
     - target: {fileID: 3011322457012364774, guid: 87824bdb8b1c30843bcee199a0617d3f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.39
+      value: 8.01
       objectReference: {fileID: 0}
     - target: {fileID: 3011322457012364774, guid: 87824bdb8b1c30843bcee199a0617d3f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 59.31
+      value: 64.01
       objectReference: {fileID: 0}
     - target: {fileID: 3011322457012364774, guid: 87824bdb8b1c30843bcee199a0617d3f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -225.505
+      value: 55.24
       objectReference: {fileID: 0}
     - target: {fileID: 3011322457012364774, guid: 87824bdb8b1c30843bcee199a0617d3f,
         type: 3}
@@ -2168,11 +2168,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -3151,7 +3151,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1468898297}
+      - m_Target: {fileID: 0}
         m_MethodName: pauseQuit
         m_Mode: 1
         m_Arguments:
@@ -3336,11 +3336,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -3554,7 +3554,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1468898297}
+      - m_Target: {fileID: 0}
         m_MethodName: ReplayLevel1
         m_Mode: 1
         m_Arguments:
@@ -4067,7 +4067,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1468898297}
+      - m_Target: {fileID: 0}
         m_MethodName: goToMain
         m_Mode: 1
         m_Arguments:
@@ -4255,32 +4255,32 @@ PrefabInstance:
     - target: {fileID: 6386889182361516368, guid: f847449d4de7f6c49880fb05f6490bc2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.39
+      value: 8.01
       objectReference: {fileID: 0}
     - target: {fileID: 6386889182361516368, guid: f847449d4de7f6c49880fb05f6490bc2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 60.81
+      value: 65.51
       objectReference: {fileID: 0}
     - target: {fileID: 6386889182361516368, guid: f847449d4de7f6c49880fb05f6490bc2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -229.80501
+      value: 50.940002
       objectReference: {fileID: 0}
     - target: {fileID: 6386889182361516368, guid: f847449d4de7f6c49880fb05f6490bc2,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.16703255
+      value: 0.16703267
       objectReference: {fileID: 0}
     - target: {fileID: 6386889182361516368, guid: f847449d4de7f6c49880fb05f6490bc2,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 2.2843078e-11
+      value: 2.2843076e-11
       objectReference: {fileID: 0}
     - target: {fileID: 6386889182361516368, guid: f847449d4de7f6c49880fb05f6490bc2,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -1.3483696e-10
+      value: -1.3483685e-10
       objectReference: {fileID: 0}
     - target: {fileID: 6386889182361516368, guid: f847449d4de7f6c49880fb05f6490bc2,
         type: 3}
@@ -4628,7 +4628,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1468898292}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccd341c424f739e44923336d4cb5ecaf, type: 3}
+  m_Script: {fileID: 11500000, guid: df7968a4b60b4934e8c6be4eb9c449d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PauseScreen: {fileID: 165989857}
@@ -5877,8 +5877,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1934403118}
-  m_LocalRotation: {x: 0.16703255, y: 2.2843078e-11, z: -1.3483696e-10, w: 0.9859514}
-  m_LocalPosition: {x: 1.39, y: 60.81, z: -229.80501}
+  m_LocalRotation: {x: 0.16703267, y: 2.2843076e-11, z: -1.3483685e-10, w: 0.9859514}
+  m_LocalPosition: {x: 8.01, y: 65.51, z: 50.940002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1688601884}
@@ -6359,11 +6359,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:

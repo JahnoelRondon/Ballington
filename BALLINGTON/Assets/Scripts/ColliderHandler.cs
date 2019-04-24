@@ -8,13 +8,13 @@ public class ColliderHandler : MonoBehaviour
     
     private PlayerMover _player;
     [SerializeField] private AudioClip _clipyay;
-        
 
+    private TestPause _pauseWin;
 
     void Start()
     {
         _player = GetComponent<PlayerMover>();
-       
+        _pauseWin = GameObject.Find("Canvas").GetComponent<TestPause>();
         
     }
 
@@ -61,7 +61,7 @@ public class ColliderHandler : MonoBehaviour
 
             case "Win":
                 AudioSource.PlayClipAtPoint(_clipyay, Camera.main.transform.position);
-                
+                Invoke("WonGame", 3f);
                 break;
         }
     }
@@ -74,7 +74,7 @@ public class ColliderHandler : MonoBehaviour
 
     private void WonGame()
     {
-        
+        _pauseWin.FinishLine();
     }
 
 }

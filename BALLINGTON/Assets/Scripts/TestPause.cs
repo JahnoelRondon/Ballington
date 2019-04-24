@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PauseUI : MonoBehaviour
-{
+public class TestPause : MonoBehaviour
+{   
     [SerializeField] GameObject PauseScreen;
     [SerializeField] GameObject Pausebutton;
     [SerializeField] GameObject Pausewin;
@@ -35,7 +35,7 @@ public class PauseUI : MonoBehaviour
         Time.timeScale = 1f;
         PauseScreen.SetActive(false);
         Pausebutton.SetActive(true);
-        _pauseAnimator.SetBool("isPaused", false);      
+        _pauseAnimator.SetBool("isPaused", false);
     }
 
     public void pauseGame()
@@ -43,12 +43,19 @@ public class PauseUI : MonoBehaviour
         Time.timeScale = 0f;
         PauseScreen.SetActive(true);
         Pausebutton.SetActive(false);
-        _pauseAnimator.SetBool("isPaused", true);      
+        _pauseAnimator.SetBool("isPaused", true);
+    }
+
+    public void FinishLine()
+    {
+        Time.timeScale = 0f;
+        Pausewin.SetActive(true);
+        _pauseAnimator.SetBool("isPaused", true);
     }
 
     public void ReplayLevel1()
     {
-        
+
     }
 
     public void pauseQuit()
