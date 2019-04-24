@@ -8,11 +8,13 @@ public class ColliderHandler : MonoBehaviour
     
     private PlayerMover _player;
     [SerializeField] private AudioClip _clipyay;
+        
 
 
     void Start()
     {
         _player = GetComponent<PlayerMover>();
+       
         
     }
 
@@ -59,6 +61,7 @@ public class ColliderHandler : MonoBehaviour
 
             case "Win":
                 AudioSource.PlayClipAtPoint(_clipyay, Camera.main.transform.position);
+                
                 break;
         }
     }
@@ -67,6 +70,11 @@ public class ColliderHandler : MonoBehaviour
     {
         yield return new WaitForSeconds(0.3f);
         SceneManager.LoadScene("World1");
+    }
+
+    private void WonGame()
+    {
+        
     }
 
 }

@@ -7,6 +7,7 @@ public class PauseUI : MonoBehaviour
 {
     [SerializeField] GameObject PauseScreen;
     [SerializeField] GameObject Pausebutton;
+    [SerializeField] GameObject Pausewin;
     private Animator _pauseAnimator;
 
     void Start()
@@ -25,7 +26,7 @@ public class PauseUI : MonoBehaviour
     {
         SceneManager.LoadScene("TutorialWorld");
         Destroy(GameObject.Find("GameMaster"));
-        //player is frozen if time isnt set back to 1
+        //time is still frozen if time isnt set back to 1 at any point in time it was set to 0
         Time.timeScale = 1f;
     }
 
@@ -39,13 +40,16 @@ public class PauseUI : MonoBehaviour
 
     public void pauseGame()
     {
-
         Time.timeScale = 0f;
         PauseScreen.SetActive(true);
         Pausebutton.SetActive(false);
         _pauseAnimator.SetBool("isPaused", true);      
     }
 
+    public void ReplayLevel1()
+    {
+        
+    }
 
     public void pauseQuit()
     {
