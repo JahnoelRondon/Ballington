@@ -5,15 +5,15 @@ using UnityEngine;
 public class GameMaster : MonoBehaviour
 {
     //[SerializeField] AudioClip _crowdAudio;
-    private PlayerMover _player;
-
+    
     void Start()
     {
-        _player = GameObject.Find("Player").GetComponent<PlayerMover>();
+       
     }
 
     void Awake()
     {
+        //singleton pattern
         int numOfGameMasters = FindObjectsOfType<GameMaster>().Length;
         if(numOfGameMasters > 1)
         {
@@ -31,8 +31,4 @@ public class GameMaster : MonoBehaviour
         //AudioSource.PlayClipAtPoint(_crowdAudio, new Vector3(0, 60.76f, -225.21f), 1f);
     }*/
 
-    void Update()
-    {
-        
-    }
 }

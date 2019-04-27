@@ -60,9 +60,7 @@ public class ColliderHandler : MonoBehaviour
                 //invoke calling method works too
                 StartCoroutine(LoadFirstLevel());
                 
-
-                //teleports player back to island instead of reloading scene
-                
+                //teleports player back to island instead of reloading scene               
                 //_player.rb.velocity = Vector3.zero;
                // transform.position = new Vector3(0.769f, 60.76f, -225.21f);
                 break;

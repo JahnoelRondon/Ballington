@@ -12,7 +12,6 @@ public class PlayerMover : MonoBehaviour
     public bool PressedJump = false;
     
 
-
     void Start()
     {
         Time.timeScale = 1;
@@ -22,6 +21,7 @@ public class PlayerMover : MonoBehaviour
     void Update()
     {
         //pressingjump
+        //input calls a function in fixed update for physics
         if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
         {
             PressedJump = true;
@@ -42,13 +42,10 @@ public class PlayerMover : MonoBehaviour
 
         rb.AddForce(velocity * Time.deltaTime);
 
-
-
         //jumping
         if (PressedJump == true)
         {
             rb.AddForce(Vector3.up * jumpForce * Time.deltaTime, ForceMode.Impulse);
-            print("pressed space");
             //rb.velocity = new Vector3(rb.velocity.x, jumpForce * Time.deltaTime, rb.velocity.z);
 
             PressedJump = false;
